@@ -1,0 +1,279 @@
+COMANDOS POSTMAN - API
+
+BASE URL:
+http://127.0.0.1:5000
+
+
+==============================
+USUÁRIOS
+==============================
+
+CADASTRAR USUÁRIO 1
+
+POST /users
+
+http://127.0.0.1:5000/users
+
+{
+    "nome": "Ana Beatriz",
+    "email": "ana.beatriz@email.com",
+    "senha": "123456"
+}
+
+
+CADASTRAR USUÁRIO 2
+
+POST /users
+
+http://127.0.0.1:5000/users
+
+{
+    "nome": "Lucas Oliveira",
+    "email": "lucas.oliveira@email.com",
+    "senha": "123456"
+}
+
+
+CADASTRAR USUÁRIO 3
+
+POST /users
+
+http://127.0.0.1:5000/users
+
+{
+    "nome": "Mariana Santos",
+    "email": "mariana.santos@email.com",
+    "senha": "123456"
+}
+
+
+CADASTRAR USUÁRIO 4
+
+POST /users
+
+http://127.0.0.1:5000/users
+
+{
+    "nome": "Gabriel Souza",
+    "email": "gabriel.souza@email.com",
+    "senha": "123456"
+}
+
+
+CADASTRAR USUÁRIO 5
+
+POST /users
+
+http://127.0.0.1:5000/users
+
+{
+    "nome": "Beatriz Costa",
+    "email": "beatriz.costa@email.com",
+    "senha": "123456"
+}
+
+
+LOGIN
+
+POST /users/login
+
+http://127.0.0.1:5000/users/login
+
+{
+    "email": "ana.beatriz@email.com",
+    "senha": "123456"
+}
+
+Authorization:
+Bearer Token
+
+
+CONSULTAR USUÁRIO
+
+GET /users/1
+
+http://127.0.0.1:5000/users/1
+
+Authorization:
+Bearer Token
+
+
+ATUALIZAR USUÁRIO
+
+PUT /users/1
+
+http://127.0.0.1:5000/users/1
+
+Authorization:
+Bearer Token
+
+{
+    "nome": "Ana Beatriz Atualizada",
+    "email": "ana.atualizada@email.com"
+}
+
+
+EXCLUIR USUÁRIO
+
+DELETE /users/5
+
+http://127.0.0.1:5000/users/5
+
+Authorization:
+Bearer Token
+
+
+
+==============================
+FORMULÁRIOS
+==============================
+
+CADASTRAR FORMULÁRIO 1
+
+POST /formularios
+
+http://127.0.0.1:5000/formularios
+
+Authorization:
+Bearer Token
+
+{
+    "titulo": "Pesquisa de Satisfação",
+    "descricao": "Formulário para avaliar a satisfação dos usuários.",
+    "usuario_id": 1
+}
+
+
+CADASTRAR FORMULÁRIO 2
+
+POST /formularios
+
+http://127.0.0.1:5000/formularios
+
+Authorization:
+Bearer Token
+
+{
+    "titulo": "Cadastro de Cliente",
+    "descricao": "Formulário para cadastro de novos clientes.",
+    "usuario_id": 2
+}
+
+
+CADASTRAR FORMULÁRIO 3
+
+POST /formularios
+
+http://127.0.0.1:5000/formularios
+
+Authorization:
+Bearer Token
+
+{
+    "titulo": "Avaliação do Sistema",
+    "descricao": "Formulário para receber opiniões sobre o sistema.",
+    "usuario_id": 3
+}
+
+
+CADASTRAR FORMULÁRIO 4
+
+POST /formularios
+
+http://127.0.0.1:5000/formularios
+
+Authorization:
+Bearer Token
+
+{
+    "titulo": "Pesquisa de Atendimento",
+    "descricao": "Formulário para avaliar a qualidade do atendimento.",
+    "usuario_id": 4
+}
+
+
+CADASTRAR FORMULÁRIO 5
+
+POST /formularios
+
+http://127.0.0.1:5000/formularios
+
+Authorization:
+Bearer Token
+
+{
+    "titulo": "Pesquisa de Preferências",
+    "descricao": "Formulário para conhecer as preferências dos usuários.",
+    "usuario_id": 5
+}
+
+
+CONSULTAR FORMULÁRIO
+
+GET /formularios/1
+
+http://127.0.0.1:5000/formularios/1
+
+Authorization:
+Bearer Token
+
+
+ATUALIZAR FORMULÁRIO
+
+PUT /formularios/1
+
+http://127.0.0.1:5000/formularios/1
+
+Authorization:
+Bearer Token
+
+{
+    "titulo": "Pesquisa de Satisfação Atualizada",
+    "descricao": "Formulário atualizado para avaliar a experiência dos usuários.",
+    "usuario_id": 1
+}
+
+
+EXCLUIR FORMULÁRIO
+
+DELETE /formularios/1
+
+http://127.0.0.1:5000/formularios/1
+
+Authorization:
+Bearer Token
+
+
+
+==============================
+TESTES
+==============================
+
+SEM AUTENTICAÇÃO
+
+GET /users/2
+
+http://127.0.0.1:5000/users/2
+
+Authorization:
+No Auth
+
+
+USUÁRIO INEXISTENTE
+
+GET /users/999
+
+http://127.0.0.1:5000/users/999
+
+Authorization:
+Bearer Token
+
+
+FORMULÁRIO INEXISTENTE
+
+GET /formularios/999
+
+http://127.0.0.1:5000/formularios/999
+
+Authorization:
+Bearer Token
